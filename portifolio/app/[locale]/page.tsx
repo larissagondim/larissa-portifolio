@@ -1,7 +1,7 @@
 import GithubActivity from "@/components/github-activity";
 import GradientBackground from '@/components/GradientBackground';
 import Hero from "@/components/Hero";
-import LocaleSwitcher from "@/components/LocaleSwitcher"; // Importa o novo botão
+import LocaleSwitcher from "@/components/LocaleSwitcher"; 
 
 export default function Home() {
   return (
@@ -11,7 +11,6 @@ export default function Home() {
         <GradientBackground />
       </div>
 
-      {/* Botão de tradução posicionado no canto superior direito */}
       <div className="absolute top-6 right-6 z-20">
         <LocaleSwitcher />
       </div>
