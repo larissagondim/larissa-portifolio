@@ -19,8 +19,8 @@ const container = {
     hidden: {},
     show: {
         transition: {
-            staggerChildren: 0.12,
-            delayChildren: 0.1,
+            staggerChildren: 0.15,
+            delayChildren: 0.2,
         },
     },
 };
@@ -44,26 +44,40 @@ export default function Hero() {
     const reduceMotion = useReducedMotion();
 
     return (
-        <section className="min-h-screen bg-[#FAF8F3] px-6 py-32">
+        <section className="px-6 py-32">
             <motion.div
                 variants={reduceMotion ? undefined : container}
                 initial={reduceMotion ? undefined : "hidden"}
                 animate={reduceMotion ? undefined : "show"}
                 className="mx-auto max-w-4xl"
-            >
-                <motion.h1
-                    variants={reduceMotion ? undefined : item}
-                    className="text-5xl font-bold text-[#1F2430]"
-                >
-                    {content.title}
-                </motion.h1>
 
-                <motion.p
-                    variants={reduceMotion ? undefined : item}
-                    className="mt-4 text-xl text-[#1F2430]"
-                >
-                    {content.subtitle}
-                </motion.p>
+            >
+                <div className="flex items-center gap-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
+                        className="h-24 w-24 rounded-xl bg-gray-300 flex items-center justify-center text-gray-500 shrink-0"
+                    >
+                        Imagem
+                    </motion.div>
+
+                    <div className="flex flex-col">
+                        <motion.h1
+                            variants={reduceMotion ? undefined : item}
+                            className="text-4xl font-bold text-[#1F2430]"
+                        >
+                            {content.title}
+                        </motion.h1>
+
+                        <motion.p
+                            variants={reduceMotion ? undefined : item}
+                            className="mt-2 text-xl text-[#1F2430]/80"
+                        >
+                            {content.subtitle}
+                        </motion.p>
+                    </div>
+                </div>
 
                 <motion.div
                     variants={reduceMotion ? undefined : item}
