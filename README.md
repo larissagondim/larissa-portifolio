@@ -20,6 +20,7 @@ Here is what has been implemented so far:
 - **Dynamic Background**: Added a custom `GradientBackground` layered behind the content using Tailwind's stacking context (`isolate` and negative `z-index`), allowing the colorful gradient to wrapper the interface cleanly.
 - **Hero Section**: Built an animated Hero component using `framer-motion`. It includes staggered reveal animations for the title, subtitle, location, university, and skill tags.
 - **GitHub Integration**: Integrated a visual contributions calendar widget (`GithubActivity`) aligned to the main page layout.
+- **Locale Switcher**: Includes a button which makes the portifolio fully in english.
 
 
 ## Getting Started
