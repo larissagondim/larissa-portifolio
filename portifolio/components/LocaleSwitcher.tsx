@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-// Importamos a navegação inteligente criada no passo 1
+
 import { useRouter, usePathname } from "@/i18n/routing";
 
 export default function LocaleSwitcher() {
@@ -12,7 +12,7 @@ export default function LocaleSwitcher() {
     const toggleLanguage = () => {
         const nextLocale = locale === "pt" ? "en" : "pt";
 
-        // O next-intl cuida de manter a rota idêntica trocando apenas o prefixo [locale]
+        
         router.replace(pathname, { locale: nextLocale });
     };
 

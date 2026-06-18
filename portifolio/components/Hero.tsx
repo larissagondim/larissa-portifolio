@@ -32,10 +32,10 @@ const item = {
 
 export default function Hero() {
     const reduceMotion = useReducedMotion();
-    // Puxa as traduções do escopo 'Hero' do JSON que estiver ativo na URL
+    
     const t = useTranslations('Hero');
 
-    // Lista de chaves das tags para iterar combinando com o seu JSON
+    
     const tagKeys = ['cc', 'ai', 'dev', 'problems'];
 
     return (
@@ -100,7 +100,7 @@ export default function Hero() {
                     </motion.div>
                 </motion.div>
 
-                {/* Renderização dinâmica das tags baseada nas chaves do JSON */}
+
                 <motion.div
                     variants={reduceMotion ? undefined : item}
                     className="mt-10 flex flex-wrap gap-3"
