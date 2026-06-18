@@ -17,10 +17,10 @@ A modern, responsive, and animated personal portfolio built with Next.js, React,
 Here is what has been implemented so far:
 
 - **Project Setup**: Initialized Next.js project with Tailwind CSS.
-- **Internationalization (i18n)**: Configured `next-intl` to support multiple languages (Portuguese `pt` and English `en`). The root route automatically redirects to the default locale (`/pt`).
+- **Dynamic Background**: Added a custom `GradientBackground` layered behind the content using Tailwind's stacking context (`isolate` and negative `z-index`), allowing the colorful gradient to wrapper the interface cleanly.
 - **Hero Section**: Built an animated Hero component using `framer-motion`. It includes staggered reveal animations for the title, subtitle, location, university, and skill tags.
-- **UI Components**: Integrated `shadcn/ui` and added the core `Button` component, which is used for calls-to-action in the Hero section.
-- **TypeScript Fixes**: Resolved strict type constraints for Next.js routing and local module definitions.
+- **GitHub Integration**: Integrated a visual contributions calendar widget (`GithubActivity`) aligned to the main page layout.
+
 
 ## Getting Started
 
