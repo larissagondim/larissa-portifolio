@@ -39,7 +39,7 @@ export default function GradientBackground() {
 
     return (
         <>
-            <div className="absolute inset-0 -z-10 pointer-events-none">
+            <div className="absolute inset-0 -z-10 pointer-events-none gradient-bg">
                 <svg>
                     <defs>
                         <filter id="goo">
@@ -71,52 +71,36 @@ export default function GradientBackground() {
 
             <style jsx>{`
         :global(:root) {
-          --color-bg1: rgb(108, 0, 162);
-          --color-bg2: rgb(0, 17, 82);
-          --color1: 18, 113, 255;
-          --color2: 221, 74, 255;
-          --color3: 100, 220, 255;
-          --color4: 200, 50, 50;
-          --color5: 180, 180, 50;
-          --color-interactive: 140, 100, 255;
-          --circle-size: 80%;
-          --blending: hard-light;
+          --color-bg1: rgb(244, 241, 234);
+          --color-bg2: rgb(230, 235, 245); 
+          
+          --color1: 168, 218, 220;  
+          --color2: 230, 190, 230; 
+          --color3: 255, 210, 215;  
+          --color4: 255, 228, 196;  
+          --color5: 190, 225, 230; 
+          --color-interactive: 200, 210, 255; 
+          
+          --circle-size: 100%;      
+          --blending: screen;      
         }
 
         @keyframes moveInCircle {
-          0% {
-            transform: rotate(0deg);
-          }
-          50% {
-            transform: rotate(180deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
+          0% { transform: rotate(0deg); }
+          50% { transform: rotate(180deg); }
+          100% { transform: rotate(360deg); }
         }
 
         @keyframes moveVertical {
-          0% {
-            transform: translateY(-50%);
-          }
-          50% {
-            transform: translateY(50%);
-          }
-          100% {
-            transform: translateY(-50%);
-          }
+          0% { transform: translateY(-30%); }
+          50% { transform: translateY(30%); }
+          100% { transform: translateY(-30%); }
         }
 
         @keyframes moveHorizontal {
-          0% {
-            transform: translateX(-50%) translateY(-10%);
-          }
-          50% {
-            transform: translateX(50%) translateY(10%);
-          }
-          100% {
-            transform: translateX(-50%) translateY(-10%);
-          }
+          0% { transform: translateX(-40%) translateY(-10%); }
+          50% { transform: translateX(40%) translateY(10%); }
+          100% { transform: translateX(-40%) translateY(-10%); }
         }
 
         .gradient-bg {
@@ -140,7 +124,8 @@ export default function GradientBackground() {
         .gradients-container {
           width: 100%;
           height: 100%;
-          filter: url(#goo) blur(40px);
+          /* Aumentei o blur de 40px para 80px para dar um efeito "aura" muito mais difuso */
+          filter: url(#goo) blur(80px); 
         }
 
         .g1,
@@ -160,8 +145,8 @@ export default function GradientBackground() {
           left: calc(50% - var(--circle-size) / 2);
           background: radial-gradient(
               circle at center,
-              rgba(var(--color1), 0.8) 0,
-              rgba(var(--color1), 0) 50%
+              rgba(var(--color1), 0.5) 0, /* Opacidade reduzida para suavizar */
+              rgba(var(--color1), 0) 60%
             )
             no-repeat;
           animation: moveVertical 30s ease infinite;
@@ -174,27 +159,27 @@ export default function GradientBackground() {
           left: calc(50% - var(--circle-size) / 2);
           background: radial-gradient(
               circle at center,
-              rgba(var(--color2), 0.8) 0,
-              rgba(var(--color2), 0) 50%
+              rgba(var(--color2), 0.5) 0,
+              rgba(var(--color2), 0) 60%
             )
             no-repeat;
-          transform-origin: calc(50% - 400px);
-          animation: moveInCircle 20s reverse infinite;
+          transform-origin: calc(50% - 300px);
+          animation: moveInCircle 25s reverse infinite;
         }
 
         .g3 {
           width: var(--circle-size);
           height: var(--circle-size);
-          top: calc(50% - var(--circle-size) / 2 + 200px);
-          left: calc(50% - var(--circle-size) / 2 - 500px);
+          top: calc(50% - var(--circle-size) / 2 + 100px);
+          left: calc(50% - var(--circle-size) / 2 - 300px);
           background: radial-gradient(
               circle at center,
-              rgba(var(--color3), 0.8) 0,
-              rgba(var(--color3), 0) 50%
+              rgba(var(--color3), 0.5) 0,
+              rgba(var(--color3), 0) 60%
             )
             no-repeat;
-          transform-origin: calc(50% + 400px);
-          animation: moveInCircle 40s linear infinite;
+          transform-origin: calc(50% + 300px);
+          animation: moveInCircle 35s linear infinite;
         }
 
         .g4 {
@@ -204,39 +189,37 @@ export default function GradientBackground() {
           left: calc(50% - var(--circle-size) / 2);
           background: radial-gradient(
               circle at center,
-              rgba(var(--color4), 0.8) 0,
-              rgba(var(--color4), 0) 50%
+              rgba(var(--color4), 0.4) 0,
+              rgba(var(--color4), 0) 60%
             )
             no-repeat;
-          transform-origin: calc(50% - 200px);
-          animation: moveHorizontal 40s ease infinite;
-          opacity: 0.7;
+          transform-origin: calc(50% - 150px);
+          animation: moveHorizontal 35s ease infinite;
         }
 
         .g5 {
-          width: calc(var(--circle-size) * 2);
-          height: calc(var(--circle-size) * 2);
-          top: calc(50% - var(--circle-size));
-          left: calc(50% - var(--circle-size));
+          width: calc(var(--circle-size) * 1.5);
+          height: calc(var(--circle-size) * 1.5);
+          top: calc(50% - var(--circle-size) / 1.5);
+          left: calc(50% - var(--circle-size) / 1.5);
           background: radial-gradient(
               circle at center,
-              rgba(var(--color5), 0.8) 0,
-              rgba(var(--color5), 0) 50%
+              rgba(var(--color5), 0.4) 0,
+              rgba(var(--color5), 0) 60%
             )
             no-repeat;
-          transform-origin: calc(50% - 800px) calc(50% + 200px);
-          animation: moveInCircle 20s ease infinite;
+          transform-origin: calc(50% - 500px) calc(50% + 100px);
+          animation: moveInCircle 25s ease infinite;
         }
 
         .interactive {
-          width: 100%;
-          height: 100%;
-          top: -50%;
-          left: -50%;
-          opacity: 0.7;
+          width: 80%;
+          height: 80%;
+          top: -40%;
+          left: -40%;
           background: radial-gradient(
               circle at center,
-              rgba(var(--color-interactive), 0.8) 0,
+              rgba(var(--color-interactive), 0.4) 0,
               rgba(var(--color-interactive), 0) 50%
             )
             no-repeat;
