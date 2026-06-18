@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import {
-  Inter,
-  Space_Grotesk,
-  JetBrains_Mono,
-} from "next/font/google";
-import "./globals.css";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+// 1. Mudamos o import do CSS para usar o alias '@/' apontando para a pasta app
+import "@/app/globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,14 +26,24 @@ export const metadata: Metadata = {
     "Portfólio de Larissa Gondim — estudante de Ciência da Computação e entusiasta de Inteligência Artificial.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface LocaleLayoutProps {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}
+
+const locales = ["en", "pt"];
+
+export default async function RootLayout({
+  children,
+  params,
+}: LocaleLayoutProps) {
+  const { locale } = await params;
+  const currentLocale = locales.includes(locale) ? locale : "pt";
+  const messages = await getMessages();
+
   return (
     <html
-      lang="pt-BR"
+      lang={currentLocale}
       className={`
         ${inter.variable}
         ${spaceGrotesk.variable}
@@ -44,8 +53,10 @@ export default function RootLayout({
       `}
     >
       <body className="min-h-full bg-[#FAF8F3] text-[#1F2430]">
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
-} 
+}

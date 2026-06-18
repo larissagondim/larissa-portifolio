@@ -1,16 +1,16 @@
 {
     "Hero": {
         "title": "larissa gondim",
-        "subtitle": "computer science student and ai enthusiast.",
+        "subtitle": "computer science student and artificial intelligence enthusiast.",
         "location": "brazil",
         "university": "federal university of paraíba - ufpb",
-        "button_projects_text": "view projects",
-        "cta_button_text": "contact me",
-        "tags": [
-            "computer science",
-            "artificial intelligence",
-            "software development",
-            "problem solving"
-        ]
+        "buttonProjects": "view projects",
+        "buttonContact": "get in touch",
+        "tags": {
+            "cc": "computer science",
+            "ai": "artificial intelligence",
+            "dev": "software development",
+            "problems": "problem solving"
+        }
     }
 }

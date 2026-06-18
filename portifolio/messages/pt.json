@@ -4,13 +4,13 @@
         "subtitle": "estudante de ciência da computação e entusiasta de inteligência artificial.",
         "location": "brasil",
         "university": "universidade federal da paraíba - ufpb",
-        "button_projects_text": "ver projetos",
-        "cta_button_text": "entrar em contato",
-        "tags": [
-            "ciência da computação",
-            "inteligência artificial",
-            "desenvolvimento de software",
-            "resolução de problemas"
-        ]
+        "buttonProjects": "ver projetos",
+        "buttonContact": "entrar em contato",
+        "tags": {
+            "cc": "ciência da computação",
+            "ai": "inteligência artificial",
+            "dev": "desenvolvimento de software",
+            "problems": "resolução de problemas"
+        }
     }
 }
