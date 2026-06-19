@@ -51,9 +51,12 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
-                        className="h-24 w-24 rounded-xl bg-gray-300 flex items-center justify-center text-gray-500 shrink-0"
+                        className="h-24 w-24 shrink-0"
                     >
-                        Imagem
+                        <img
+                            src="https://avatars.githubusercontent.com/u/198407031?v=4"
+                            alt="Larissa"
+                            className='w-24 h-24 rounded-xl shadow-md border border-[#E7E4DD]' />
                     </motion.div>
 
                     <div className="flex flex-col">
