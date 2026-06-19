@@ -12,5 +12,85 @@
             "dev": "desenvolvimento de software",
             "problems": "resolução de problemas"
         }
-    }
+    },
+    "Projects": [
+        {
+            "id": "pauta",
+            "title": "pauta – sistema inteligente de análise legislativa",
+            "status": "completed",
+            "shortDescription": "plataforma de NLP e IA para processamento de dados legislativos municipais, gerando resumos automatizados e mapeamento semântico para recomendação de candidatos.",
+            "technologies": [
+                "python",
+                "NLP (SpaCy/NLTK)",
+                "BERT embeddings",
+                "autoencoders",
+                "groq API (LLMs)",
+                "web scraping"
+            ],
+            "contributionsAndAchievements": [
+                "arquitetura do fluxo de pré-processamento de NLP, incluindo limpeza de texto, tokenização, lematização e filtragem de stopwords.",
+                "integração da API da groq para a sumarização automatizada e inteligente de propostas políticas complexas.",
+                "implementação da modelagem de representação semântica combinando embeddings BERT e autoencoder para refinar o motor de recomendação."
+            ],
+            "repository": "https://github.com/TailUFPB/Trainees_2026.1-Pauta"
+        },
+        {
+            "id": "poke-c",
+            "title": "pokémon ADT",
+            "status": "in progress",
+            "shortDescription": "engine de simulação de batalhas pokémon desenvolvida em c de baixo nível, focada no conceito estrito de tipos abstratos de dados (ADT) e gerenciamento otimizado de memória.",
+            "technologies": [
+                "c",
+                "estruturas de dados",
+                "gerenciamento dinâmico de memória",
+                "modularização (análise estática/ponteiros)"
+            ],
+            "contributionsAndAchievements": [
+                "construção de uma arquitetura modular de baixo nível que encapsula o ciclo de vida dos pokémon, golpes e atributos por meio de contratos estritos em arquivos .h.",
+                "modelagem matemática e implementação de algoritmos para cálculo de dano oficial, aplicação de modificadores de status e tabelas de efetividade de tipos.",
+                "controle rigoroso sobre alocação dinâmica de memória (malloc/free) para garantir uma execução limpa e livre de memory leaks.",
+                "manipulação direta de strings e ponteiros para emular a fila de execução de ações por turno no terminal."
+            ],
+            "repository": "https://github.com/larissagondim/poke-c.git"
+        },
+        {
+            "id": "java-tech-wordle",
+            "title": "java tech wordle (termo-java)",
+            "status": "in progress",
+            "shortDescription": "adaptação customizada do jogo termo/wordle com temática do universo de tecnologia, focada em POO sólida e interface gráfica desktop nativa.",
+            "technologies": [
+                "java 21",
+                "javaFX",
+                "programação orientada a objetos",
+                "persistência de dados"
+            ],
+            "contributionsAndAchievements": [
+                "desenvolvimento da interface gráfica nativa utilizando javaFX, aplicando feedback visual reativo para as de tentativas do usuário.",
+                "modelagem de domínio robusta baseada em padrões de projeto e nos princípios de encapsulamento e reaproveitamento do java 21.",
+                "construção de um sistema dinâmico de validação de palavras a partir de um dicionário focado em termos técnicos e palavras do mundo dev.",
+                "implementação de lógica para persistência e leitura de dados locais para manipulação do estado e histórico de progresso do jogador."
+            ],
+            "repository": "https://github.com/larissagondim/java-tech-wordle.git"
+        },
+        {
+            "id": "beecrowd",
+            "title": "resoluções beecrowd",
+            "status": "completed",
+            "shortDescription": "uma coleção de problemas de programação competitiva e algorítmica resolvidos em c, c++ e python, acompanhando o aprendizado contínuo em lógica e estruturas de dados.",
+            "technologies": [
+                "c",
+                "c++",
+                "python",
+                "algoritmos",
+                "estruturas de dados"
+            ],
+            "contributionsAndAchievements": [
+                "implementação de soluções otimizadas para diversos desafios algorítmicos englobando vetores, matrizes, strings e lógica matemática.",
+                "foco em eficiência de código, otimização de tempo de execução e limites de memória exigidos por plataformas competitivas.",
+                "estruturação de um repositório limpo e organizado para fácil acompanhamento das resoluções de problemas individuais.",
+                "manutenção de uma rotina contínua de programação para fortalecer a velocidade de resolução e análise algorítmica."
+            ],
+            "repository": "https://github.com/larissagondim/Beecrowds"
+        }
+    ]
 }
