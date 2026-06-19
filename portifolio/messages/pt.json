@@ -1,4 +1,14 @@
 {
+    "Nav": {
+        "about": "sobre",
+        "experience": "experiência",
+        "projects": "projetos",
+        "contact": "contato"
+    },
+    "About": {
+        "title": "sobre",
+        "description": "sou estudante do terceiro período de ciência da computação na ufpb, com foco em desenvolvimento web full-stack e inteligência artificial. minha atuação técnica une a construção de aplicações em react, next.js e java à aplicação prática de modelos de ocr e processamento de linguagem natural (pln). gosto de resolver questões de programação competitiva no tempo livre, acho divertido quebrar a cabeça com problemas. e para fazer tudo isso, utilizo o linux como meu ecossistema principal. fora do codigo, busco o equilíbrio através do desenho, da música e de jogos da nintendo."
+    },
     "Hero": {
         "title": "larissa gondim",
         "subtitle": "estudante de ciência da computação e entusiasta de inteligência artificial.",

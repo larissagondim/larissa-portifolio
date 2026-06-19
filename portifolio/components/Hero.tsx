@@ -32,14 +32,14 @@ const item = {
 
 export default function Hero() {
     const reduceMotion = useReducedMotion();
-    
+
     const t = useTranslations('Hero');
 
-    
+
     const tagKeys = ['cc', 'ai', 'dev', 'problems'];
 
     return (
-        <section className="px-6 py-32">
+        <section className="pt-4 pb-4 px-4">
             <motion.div
                 variants={reduceMotion ? undefined : container}
                 initial={reduceMotion ? undefined : "hidden"}
@@ -124,7 +124,7 @@ export default function Hero() {
                     variants={item}
                     className="mt-10 flex gap-4"
                 >
-                    <motion.div
+                    {/* <motion.div
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                     >
@@ -145,7 +145,7 @@ export default function Hero() {
                                 <ArrowRight size={16} />
                             </a>
                         </Button>
-                    </motion.div>
+                    </motion.div> */}
                 </motion.div>
             </motion.div>
         </section>
