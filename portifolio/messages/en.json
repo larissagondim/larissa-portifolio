@@ -1,16 +1,96 @@
 {
     "Hero": {
         "title": "larissa gondim",
-        "subtitle": "computer science student and ai enthusiast.",
+        "subtitle": "computer science student and artificial intelligence enthusiast.",
         "location": "brazil",
         "university": "federal university of paraíba - ufpb",
-        "button_projects_text": "view projects",
-        "cta_button_text": "contact me",
-        "tags": [
-            "computer science",
-            "artificial intelligence",
-            "software development",
-            "problem solving"
-        ]
-    }
+        "buttonProjects": "view projects",
+        "buttonContact": "get in touch",
+        "tags": {
+            "cc": "computer science",
+            "ai": "artificial intelligence",
+            "dev": "software development",
+            "problems": "problem solving"
+        }
+    },
+    "Projects": [
+        {
+            "id": "pauta",
+            "title": "pauta – intelligent legislative analysis system",
+            "status": "completed",
+            "shortDescription": "an AI and NLP platform designed to process municipal legislative data, generating automated summaries and semantic mapping for candidate recommendations.",
+            "technologies": [
+                "python",
+                "NLP (SpaCy/NLTK)",
+                "BERT embeddings",
+                "autoencoders",
+                "groq API (LLMs)",
+                "web scraping"
+            ],
+            "contributionsAndAchievements": [
+                "architected the NLP preprocessing workflow, including text cleaning, tokenization, lemmatization, and stopword filtering.",
+                "integrated the groq API for intelligent, automated summarization of complex political proposals.",
+                "implemented semantic representation modeling by combining BERT embeddings and an autoencoder to refine the recommendation engine."
+            ],
+            "repository": "https://github.com/TailUFPB/Trainees_2026.1-Pauta"
+        },
+        {
+            "id": "poke-c",
+            "title": "pokémon ADT",
+            "status": "in progress",
+            "shortDescription": "a low-level pokémon battle simulation engine developed in c, focusing on strict abstract data type (ADT) concepts and optimized memory management.",
+            "technologies": [
+                "c",
+                "data structures",
+                "dynamic memory management",
+                "modularization (static analysis/pointers)"
+            ],
+            "contributionsAndAchievements": [
+                "built a low-level modular architecture that encapsulates pokémon lifecycles, moves, and attributes via strict contracts in .h header files.",
+                "modeled and implemented core game algorithms for official damage calculation, status modifiers, and type effectiveness charts.",
+                "maintained rigorous control over dynamic memory allocation (malloc/free) to guarantee clean execution and prevent memory leaks.",
+                "manipulated strings and pointers directly to emulate a turn-based action execution queue inside the terminal."
+            ],
+            "repository": "https://github.com/larissagondim/poke-c.git"
+        },
+        {
+            "id": "java-tech-wordle",
+            "title": "java tech wordle (termo-java)",
+            "status": "in progress",
+            "shortDescription": "a customized adaptation of the wordle/termo game themed around the tech universe, built with solid OOP principles and a native desktop graphical interface.",
+            "technologies": [
+                "java 21",
+                "javaFX",
+                "object-oriented programming",
+                "data persistence"
+            ],
+            "contributionsAndAchievements": [
+                "developed a native graphical user interface using javaFX, implementing reactive visual feedback for user guesses.",
+                "architected a robust domain model leveraging design patterns and java 21 encapsulation and reusability features.",
+                "built a dynamic word validation system backed by a custom dictionary focused on technical terms and developer culture.",
+                "implemented local data reading and persistence logic to manage game states and track player progress history."
+            ],
+            "repository": "https://github.com/larissagondim/java-tech-wordle.git"
+        },
+        {
+            "id": "beecrowd",
+            "title": "beecrowd solutions",
+            "status": "completed",
+            "shortDescription": "a collection of competitive programming and algorithmic problems solved in c, c++, and python, tracking continuous learning in logic and data structures.",
+            "technologies": [
+                "c",
+                "c++",
+                "python",
+                "algorithms",
+                "data structures"
+            ],
+            "contributionsAndAchievements": [
+                "implemented optimal solutions for diverse algorithmic challenges covering arrays, matrices, strings, and mathematical logic.",
+                "focused on code efficiency, runtime optimization, and memory constraints required by competitive platforms.",
+                "structured a clean and organized repository architecture to easily track individual problem resolutions.",
+                "maintained a continuous daily coding routine to strengthen problem-solving speed and algorithmic analysis."
+            ],
+            "repository": "https://github.com/larissagondim/Beecrowds"
+        }
+    ]
 }

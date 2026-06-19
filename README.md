@@ -21,8 +21,12 @@ Here is what has been implemented so far:
 - **Hero Section**: Built an animated Hero component using `framer-motion`. It includes staggered reveal animations for the title, subtitle, location, university, and skill tags.
 - **GitHub Integration**: Integrated a visual contributions calendar widget (`GithubActivity`) aligned to the main page layout.
 - **Locale Switcher**: Includes a button which makes the portifolio fully in english.
+<<<<<<< HEAD
 - **Featured Projects**: Developed a responsive projects section displaying detailed cards for "Pauta", "Pokémon ADT", "Java Tech Wordle", and "Beecrowd". Included smooth hover animations and expandable details for key contributions.
 - **Translation & i18n Fixes**: Successfully wired up `next-intl` to translate UI elements and project data. Fixed Next.js 15 async `params` logic to correctly switch languages dynamically across the entire app.
+=======
+
+>>>>>>> 096f68f73d631d8839b91eb5549c91488841d759
 
 ## Getting Started
 

@@ -3,17 +3,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { MapPin, GraduationCap, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import pt from '@/messages/pt.json';
-
-const content = pt.Hero;
-
-function toIdentifier(label: string): string {
-    return label
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase()
-        .replace(/\s+/g, '_');
-}
+import { useTranslations } from 'next-intl';
 
 const container = {
     hidden: {},
@@ -42,6 +32,11 @@ const item = {
 
 export default function Hero() {
     const reduceMotion = useReducedMotion();
+    
+    const t = useTranslations('Hero');
+
+    
+    const tagKeys = ['cc', 'ai', 'dev', 'problems'];
 
     return (
         <section className="px-6 py-32">
@@ -50,7 +45,6 @@ export default function Hero() {
                 initial={reduceMotion ? undefined : "hidden"}
                 animate={reduceMotion ? undefined : "show"}
                 className="mx-auto max-w-4xl"
-
             >
                 <div className="flex items-center gap-8">
                     <motion.div
@@ -67,14 +61,14 @@ export default function Hero() {
                             variants={reduceMotion ? undefined : item}
                             className="text-4xl font-bold text-[#1F2430]"
                         >
-                            {content.title}
+                            {t('title')}
                         </motion.h1>
 
                         <motion.p
                             variants={reduceMotion ? undefined : item}
                             className="mt-2 text-xl text-[#1F2430]/80"
                         >
-                            {content.subtitle}
+                            {t('subtitle')}
                         </motion.p>
                     </div>
                 </div>
@@ -89,9 +83,8 @@ export default function Hero() {
                         className="flex items-center gap-2"
                     >
                         <MapPin className="text-[#1F2430]" size={20} />
-
                         <span className="text-[#1F2430]">
-                            {content.location}
+                            {t('location')}
                         </span>
                     </motion.div>
 
@@ -101,28 +94,28 @@ export default function Hero() {
                         className="flex items-center gap-2"
                     >
                         <GraduationCap className="text-[#1F2430]" size={20} />
-
                         <span className="text-[#1F2430]">
-                            {content.university}
+                            {t('university')}
                         </span>
                     </motion.div>
                 </motion.div>
+
 
                 <motion.div
                     variants={reduceMotion ? undefined : item}
                     className="mt-10 flex flex-wrap gap-3"
                 >
-                    {content.tags.map((tag) => (
+                    {tagKeys.map((key) => (
                         <motion.span
-                            key={tag}
+                            key={key}
                             whileHover={{
                                 scale: 1.05,
                                 y: -2,
                             }}
                             whileTap={{ scale: 0.95 }}
-                            className="rounded-full bg-white px-4 py-2 text-sm text-[#1F2430] shadow-sm"
+                            className="rounded-full bg-white/60 dark:bg-zinc-900/40 backdrop-blur-sm px-4 py-2 text-sm text-[#1F2430] shadow-sm"
                         >
-                            {tag}
+                            {t(`tags.${key}`)}
                         </motion.span>
                     ))}
                 </motion.div>
@@ -137,7 +130,7 @@ export default function Hero() {
                     >
                         <Button asChild>
                             <a href="#projetos">
-                                {content.button_projects_text}
+                                {t('buttonProjects')}
                             </a>
                         </Button>
                     </motion.div>
@@ -148,7 +141,7 @@ export default function Hero() {
                     >
                         <Button variant="outline" asChild>
                             <a href="#contato" className="gap-2">
-                                {content.cta_button_text}
+                                {t('buttonContact')}
                                 <ArrowRight size={16} />
                             </a>
                         </Button>
