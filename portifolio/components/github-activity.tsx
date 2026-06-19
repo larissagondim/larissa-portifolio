@@ -31,7 +31,7 @@ export default function GithubActivity({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            className="px-6 py-16 sm:px-10 lg:px-16"
+            className="px-4 pt-4 pb-4 sm:px-10 lg:px-16"
         >
             <div className="mx-auto max-w-4xl">
                 <motion.div

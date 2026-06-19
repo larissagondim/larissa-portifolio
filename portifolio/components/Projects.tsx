@@ -2,10 +2,8 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-// Correção do import: Usando GitHub (com H maiúsculo)
 import { FolderGit, ExternalLink } from "lucide-react"
 
-// 1. Criando a interface para tipar o seu projeto do JSON
 interface Project {
     id: string
     title: string
@@ -36,7 +34,6 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
             </CardHeader>
 
             <CardContent className="space-y-4">
-                {/* Tecnologias - Tipando explicitamente o parâmetro 'tech' como string */}
                 <div className="flex flex-wrap gap-1.5">
                     {project.technologies.map((tech: string) => (
                         <Badge key={tech} variant="secondary" className="text-xs">
@@ -45,7 +42,6 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
                     ))}
                 </div>
 
-                {/* Conquistas Ocultas/Expansíveis */}
                 <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="achievements" className="border-zinc-800">
                         <AccordionTrigger className="text-sm text-zinc-900 hover:text-zinc-300">
@@ -53,7 +49,6 @@ export function ProjectCard({ project, locale }: ProjectCardProps) {
                         </AccordionTrigger>
                         <AccordionContent>
                             <ul className="list-disc pl-4 space-y-1 text-sm text-zinc-600">
-                                {/* Tipando explicitamente 'item' como string e 'index' como number */}
                                 {project.contributionsAndAchievements.map((item: string, index: number) => (
                                     <li key={index}>{item}</li>
                                 ))}
