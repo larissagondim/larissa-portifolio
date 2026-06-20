@@ -2,6 +2,7 @@
     "Nav": {
         "about": "about",
         "experience": "experience",
+        "education": "education",
         "projects": "projects",
         "contact": "contact"
     },
@@ -139,6 +140,32 @@
                 "developed the pauta project, centered on web scraping and extracting legislative data from municipal chambers.",
                 "engineered structured text cleaning workflows, tokenization, lemmatization, and topic modeling processes.",
                 "leveraged LLMs via groq API alongside BERT embeddings and autoencoder architectures for recommendation engines."
+            ]
+        }
+    ],
+    "Education": [
+        {
+            "id": "graduation",
+            "institution": "UFPB - federal university of paraiba",
+            "degree": "bachelor's degree in computer science",
+            "period": "2025 - 2029 (expected completion)",
+            "shortDescription": "bachelor's degree in computer science with a focus on artificial intelligence, software engineering, and algorithmic problem-solving.",
+            "achievements": [
+                "gpa: 9.25/10"
+            ]
+        },
+        {
+            "id": "high-school",
+            "institution": "colégio motiva",
+            "degree": "high school",
+            "period": "2022 - 2024",
+            "shortDescription": "high school with a focus on preparation for science competitions in the olympic track and a strong scientific and mathematical foundation.",
+            "achievements": [
+                "gpa: 9.14/10",
+                "twice medalist in the brazilian astronomy olympiad (oba) with a bronze medal (2023) and a silver medal (2024)",
+                "twice recognized in the national science olympiad (onc) with an honorable mention (2023) and a silver medal (2024)",
+                "regional bronze medal and national honorable mention in the brazilian public school mathematics olympiad (obmep) 2024",
+                "finalist in the brazilian technology olympiad (obt) in 2024"
             ]
         }
     ]

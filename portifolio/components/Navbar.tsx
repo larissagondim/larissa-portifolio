@@ -10,6 +10,7 @@ const navLinks = [
   { key: "about", href: "#sobre" },
   { key: "projects", href: "#projetos" },
   { key: "experience", href: "#experiencia" },
+  { key: "education", href: "#educacao" },
   { key: "contact", href: "#contato" },
 ] as const;
 

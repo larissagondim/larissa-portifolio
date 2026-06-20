@@ -2,6 +2,7 @@
     "Nav": {
         "about": "sobre",
         "experience": "experiência",
+        "education": "educação",
         "projects": "projetos",
         "contact": "contato"
     },
@@ -139,6 +140,32 @@
                 "desenvolvimento do projeto pauta focado em web scraping e extração de dados legislativos de câmaras municipais.",
                 "construção de fluxos de limpeza textual estruturada, tokenização, lematização e modelagem de tópicos.",
                 "utilização de LLMs via groq API e arquitetura de embeddings BERT integrados a autoencoders para sistemas de recomendação."
+            ]
+        }
+    ],
+    "Education": [
+        {
+            "id": "graduation",
+            "institution": "UFPB - universidade federal da paraíba",
+            "degree": "bacharelado em ciência da computação",
+            "period": "2025 - 2029 (previsão de conclusão)",
+            "shortDescription": "graduação em ciência da computação com foco em inteligência artificial, engenharia de software e resolução de problemas algorítmicos.",
+            "achievements": [
+                "cr/gpa: 9,25/10"
+            ]
+        },
+        {
+            "id": "high-school",
+            "institution": "colégio motiva",
+            "degree": "ensino médio",
+            "period": "2022 - 2024",
+            "shortDescription": "ensino médio com foco em preparação para competições científicas na turma olímpica e forte embasamento científico e matemático.",
+            "achievements": [
+                "cr/gpa: 9,14/10",
+                "duplamente medalhista na olimpíada brasileira de astronomia (OBA) com medalha de bronze (2023) e prata (2024)",
+                "duplamente premiada na olimpíada nacional de ciências (ONC) com honra ao mérito (2023) e medalha de prata (2024)",
+                "medalha de bronze regional e honra ao mérito nacional na olimpíada brasileira de matemática das escolas públicas (OBMEP) 2024",
+                "finalista na olimpíada brasileira de tecnologia (OBT) em 2024"
             ]
         }
     ]

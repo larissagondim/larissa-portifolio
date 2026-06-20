@@ -5,8 +5,8 @@ import Navbar from "@/components/Navbar";
 import { FadeUp } from "@/components/FadeUp";
 import { SlideIn } from "@/components/SlideIn";
 import { ProjectCard } from "@/components/Projects";
-// Importação do novo componente de experiências
 import { ExperienceSection } from "@/components/Experience";
+import { EducationSection } from "@/components/Education";
 
 import ptMessages from "@/messages/pt.json";
 import enMessages from "@/messages/en.json";
@@ -23,8 +23,8 @@ export default async function Home({ params }: HomeProps) {
   const messages = currentLocale === "en" ? enMessages : ptMessages;
 
   const projects = messages.Projects || [];
-  // Captura o array de experiências de dentro do JSON de traduções
   const experiences = messages.Experience || [];
+  const educations = messages.Education || [];
 
   return (
     <main className="min-h-screen dark:bg-black relative overflow-x-hidden isolate">
@@ -74,6 +74,15 @@ export default async function Home({ params }: HomeProps) {
             <ExperienceSection
               experiences={experiences}
               title={currentLocale === "en" ? "experience" : "experiência"}
+            />
+          </section>
+        </FadeUp>
+
+        <FadeUp>
+          <section id="educacao" className="scroll-m-28">
+            <EducationSection
+              educations={educations}
+              title={currentLocale === "en" ? "education" : "educação"}
             />
           </section>
         </FadeUp>
