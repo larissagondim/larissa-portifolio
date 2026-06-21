@@ -1,9 +1,10 @@
 {
     "Nav": {
         "about": "about",
+        "projects": "projects",
+        "skills": "skills",
         "experience": "experience",
         "education": "education",
-        "projects": "projects",
         "contact": "contact"
     },
     "About": {
@@ -168,5 +169,57 @@
                 "finalist in the brazilian technology olympiad (obt) in 2024"
             ]
         }
-    ]
+    ],
+    "Skills": {
+        "title": "technical skills",
+        "categories": [
+            {
+                "name": "programming languages",
+                "items": [
+                    "C",
+                    "C++",
+                    "Java (21)",
+                    "Python"
+                ]
+            },
+            {
+                "name": "frameworks and libraries",
+                "items": [
+                    "React",
+                    "Next.js",
+                    "JavaFX",
+                    "Node.js",
+                    "pandas",
+                    "NumPy",
+                    "scikit-learn",
+                    "TensorFlow",
+                    "Keras",
+                    "SpaCy",
+                    "Streamlit"
+                ]
+            },
+            {
+                "name": "tools and technologies",
+                "items": [
+                    "Git",
+                    "GitHub",
+                    "Linux (Zorin OS/Ubuntu)",
+                    "Docker",
+                    "Supabase",
+                    "SQL"
+                ]
+            },
+            {
+                "name": "areas of expertise",
+                "items": [
+                    "artificial intelligence",
+                    "natural language processing (NLP)",
+                    "computer vision (OCR/VLM)",
+                    "competitive programming",
+                    "data structures",
+                    "rule-based systems"
+                ]
+            }
+        ]
+    }
 }

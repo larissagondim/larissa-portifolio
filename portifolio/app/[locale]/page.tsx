@@ -7,6 +7,7 @@ import { SlideIn } from "@/components/SlideIn";
 import { ProjectCard } from "@/components/Projects";
 import { ExperienceSection } from "@/components/Experience";
 import { EducationSection } from "@/components/Education";
+import { SkillsSection } from "@/components/Skills";
 
 import ptMessages from "@/messages/pt.json";
 import enMessages from "@/messages/en.json";
@@ -21,7 +22,7 @@ export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
   const currentLocale = locale === "en" ? "en" : "pt";
   const messages = currentLocale === "en" ? enMessages : ptMessages;
-
+  const skillsData = messages.Skills || { title: "", categories: [] };
   const projects = messages.Projects || [];
   const experiences = messages.Experience || [];
   const educations = messages.Education || [];
@@ -66,6 +67,15 @@ export default async function Home({ params }: HomeProps) {
                 <ProjectCard key={project.id} project={project} locale={currentLocale} />
               ))}
             </div>
+          </section>
+        </FadeUp>
+
+        <FadeUp>
+          <section id="habilidades" className="scroll-m-28">
+            <SkillsSection
+              title={skillsData.title}
+              categories={skillsData.categories}
+            />
           </section>
         </FadeUp>
 

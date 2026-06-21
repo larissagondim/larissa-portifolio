@@ -25,6 +25,7 @@ Here is what has been implemented so far:
 - **Featured Projects**: Developed a responsive projects section displaying detailed cards for "Pauta", "Pokémon ADT", "Java Tech Wordle", and "Beecrowd". Included smooth hover animations and expandable details for key contributions.
 - **Scroll Animations**: Implemented reusable viewport-triggered entrance animations (`FadeUp` and `SlideIn`) for all page sections using `framer-motion`.
 - **Translation & i18n Fixes**: Successfully wired up `next-intl` to translate UI elements and project data. Fixed Next.js 15 async `params` logic to correctly switch languages dynamically across the entire app.
+- **Skills, Experience & Education**: Integrated dynamic, localized sections for "Skills", "Experience", and "Education", showcasing technical expertise, professional background, and academic trajectory. Ensured consistent interactive card designs and animations across all sections.
 
 ## Getting Started
 
