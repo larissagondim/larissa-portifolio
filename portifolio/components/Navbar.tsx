@@ -9,7 +9,9 @@ import { useState } from "react";
 const navLinks = [
   { key: "about", href: "#sobre" },
   { key: "projects", href: "#projetos" },
+  { key: "skills", href: "#habilidades" },
   { key: "experience", href: "#experiencia" },
+  { key: "education", href: "#educacao" },
   { key: "contact", href: "#contato" },
 ] as const;
 

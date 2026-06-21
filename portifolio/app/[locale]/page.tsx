@@ -5,6 +5,9 @@ import Navbar from "@/components/Navbar";
 import { FadeUp } from "@/components/FadeUp";
 import { SlideIn } from "@/components/SlideIn";
 import { ProjectCard } from "@/components/Projects";
+import { ExperienceSection } from "@/components/Experience";
+import { EducationSection } from "@/components/Education";
+import { SkillsSection } from "@/components/Skills";
 
 import ptMessages from "@/messages/pt.json";
 import enMessages from "@/messages/en.json";
@@ -19,8 +22,10 @@ export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
   const currentLocale = locale === "en" ? "en" : "pt";
   const messages = currentLocale === "en" ? enMessages : ptMessages;
-
+  const skillsData = messages.Skills || { title: "", categories: [] };
   const projects = messages.Projects || [];
+  const experiences = messages.Experience || [];
+  const educations = messages.Education || [];
 
   return (
     <main className="min-h-screen dark:bg-black relative overflow-x-hidden isolate">
@@ -35,6 +40,7 @@ export default async function Home({ params }: HomeProps) {
         <section className="scroll-m-20">
           <Hero />
         </section>
+
         <section className="scroll-m-28">
           <GithubActivity />
         </section>
@@ -61,6 +67,33 @@ export default async function Home({ params }: HomeProps) {
                 <ProjectCard key={project.id} project={project} locale={currentLocale} />
               ))}
             </div>
+          </section>
+        </FadeUp>
+
+        <FadeUp>
+          <section id="habilidades" className="scroll-m-28">
+            <SkillsSection
+              title={skillsData.title}
+              categories={skillsData.categories}
+            />
+          </section>
+        </FadeUp>
+
+        <FadeUp>
+          <section id="experiencia" className="scroll-m-28">
+            <ExperienceSection
+              experiences={experiences}
+              title={currentLocale === "en" ? "experience" : "experiência"}
+            />
+          </section>
+        </FadeUp>
+
+        <FadeUp>
+          <section id="educacao" className="scroll-m-28">
+            <EducationSection
+              educations={educations}
+              title={currentLocale === "en" ? "education" : "educação"}
+            />
           </section>
         </FadeUp>
 
