@@ -76,7 +76,7 @@ export default async function Home({ params }: HomeProps) {
             </p>
             <div className="flex gap-3 flex-wrap">
               <a
-                href="mailto:larissagondim@example.com"
+                href="mailto:larissa.gondim@academico.ufpb.br"
                 className="px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/40 dark:bg-black/40 backdrop-blur-md text-sm font-medium text-[#1F2430] dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors lowercase"
               >
                 email
