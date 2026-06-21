@@ -1,9 +1,10 @@
 {
     "Nav": {
         "about": "sobre",
+        "projects": "projetos",
+        "skills": "habilidades",
         "experience": "experiência",
         "education": "educação",
-        "projects": "projetos",
         "contact": "contato"
     },
     "About": {
@@ -168,5 +169,57 @@
                 "finalista na olimpíada brasileira de tecnologia (OBT) em 2024"
             ]
         }
-    ]
+    ],
+    "Skills": {
+        "title": "habilidades técnicas",
+        "categories": [
+            {
+                "name": "linguagens de programação",
+                "items": [
+                    "C",
+                    "C++",
+                    "Java",
+                    "Python"
+                ]
+            },
+            {
+                "name": "frameworks e bibliotecas",
+                "items": [
+                    "React",
+                    "Next.js",
+                    "JavaFX",
+                    "Node.js",
+                    "pandas",
+                    "NumPy",
+                    "scikit-learn",
+                    "TensorFlow",
+                    "Keras",
+                    "SpaCy",
+                    "Streamlit"
+                ]
+            },
+            {
+                "name": "ferramentas e tecnologias",
+                "items": [
+                    "Git",
+                    "GitHub",
+                    "Linux (Zorin OS/Ubuntu)",
+                    "Docker",
+                    "Supabase",
+                    "SQL"
+                ]
+            },
+            {
+                "name": "áreas de especialidade",
+                "items": [
+                    "inteligência artificial",
+                    "processamento de linguagem natural (NLP)",
+                    "visão computacional (OCR/VLM)",
+                    "programação competitiva",
+                    "estruturas de dados",
+                    "sistemas baseados em regras"
+                ]
+            }
+        ]
+    }
 }
